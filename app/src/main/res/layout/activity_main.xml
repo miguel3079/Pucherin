@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#af000000">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imagencentro"
+        android:src="@drawable/pucherito70fichas"
+        android:layout_above="@+id/imagen4"
+        android:layout_centerHorizontal="true"
+        android:onClick="lanzarDados" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen8"
+        android:src="@drawable/pucherito80fichas"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/imagencentro" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen6"
+        android:src="@drawable/pucherito60fichas"
+        android:layout_alignTop="@+id/imagencentro"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-10dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen5"
+        android:src="@drawable/pucherito50fichas"
+        android:layout_below="@+id/imagen6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen4"
+        android:src="@drawable/pucherito40fichas"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/imagencentro" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen3"
+        android:src="@drawable/pucherito30fichas"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen9"
+        android:src="@drawable/pucherito90fichas"
+        android:layout_alignTop="@+id/imagen8"
+        android:layout_toEndOf="@+id/imagencentro" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen10"
+        android:src="@drawable/pucherito100fichas"
+        android:layout_alignTop="@+id/imagencentro"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen11"
+        android:src="@drawable/pucherito110fichas"
+        android:layout_alignTop="@+id/imagen5"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagen2"
+        android:src="@drawable/pucherito20fichas"
+        android:layout_below="@+id/imagencentro"
+        android:layout_toEndOf="@+id/imagencentro" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textContador"
+        android:layout_alignTop="@+id/imagen8"
+        android:layout_centerHorizontal="true"
+        android:textColor="#bbacffbc"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/dadoA"
+        android:src="@drawable/dado1"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/imagen8" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/dadoB"
+        android:src="@drawable/dado1"
+        android:layout_alignTop="@+id/dadoA"
+        android:layout_alignEnd="@+id/imagen9" />
+
+</RelativeLayout>
