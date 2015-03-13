@@ -46,7 +46,7 @@ public class PantallaMenu extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     public void pasarJugar(View view){
-        Intent pasarJugar = new Intent(this,SeleccionJugador.class);
+        Intent pasarJugar = new Intent(this,MainActivity.class);
         startActivity(pasarJugar);
     }
 }

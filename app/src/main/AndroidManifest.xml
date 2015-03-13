@@ -23,11 +23,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SeleccionJugador"
-            android:label="@string/title_activity_seleccion_jugador"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
             android:name=".Instrucciones"
             android:label="@string/title_activity_instrucciones"
             android:screenOrientation="landscape">

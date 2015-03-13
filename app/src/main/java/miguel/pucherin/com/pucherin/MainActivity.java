@@ -1,5 +1,8 @@
 package miguel.pucherin.com.pucherin;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -12,18 +15,16 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
 public class MainActivity extends ActionBarActivity {
     //
-
     Random randomA = new Random();
     Random randomB = new Random();
-    int Player1,Player2;
+    int Player1,Player2,Player3,Player4;
             int Turno=0;
-    ArrayList<Player> players;
+            int CantidadJugadores=0;
     int A, B;
     ImageView imagencentro, imagen2, imagen3, imagen4, imagen5, imagen6, imagen8, imagen9, imagen10,
             imagen11, dadoA, dadoB;
@@ -37,12 +38,13 @@ public class MainActivity extends ActionBarActivity {
     HashMap<Integer,Integer>hasficha9 = new HashMap<Integer,Integer>();
     HashMap<Integer,Integer>hasficha10 = new HashMap<Integer,Integer>();
     HashMap<Integer,Integer>hasficha11 = new HashMap<Integer,Integer>();
-
+    String[] items = {"2", "3", "4"};
     int Contador;
     int Puchero;
     int total2,total3,total4,total5,total6,total8,total9,total10,total11;
+    //Jugadores
     TextView textJug1,textJug2,textJug3,textJug4;
-
+    final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,7 @@ public class MainActivity extends ActionBarActivity {
         inicializarImagenes();
         Contador = 60;
         Puchero = 0;
+
         total2 = 0;total3 = 0;total4 = 0;total5 = 0;total6 = 0;total8 = 0;total9 = 0;total10 = 0;
         total11 = 0;
 
@@ -64,6 +67,32 @@ public class MainActivity extends ActionBarActivity {
         hasficha2.put(1,1);hasficha3.put(1,1);hasficha4.put(1,1);hasficha5.put(1,1);hasficha6.put(1,1);
         hasficha8.put(1,1);hasficha9.put(1,1);hasficha10.put(1,1); hasficha11.put(1,1);
 
+        //// Dialogo/////////
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+
+        // set title
+        alertDialogBuilder.setTitle("Numeros de Jugadores");
+
+        // set dialog message
+        alertDialogBuilder
+                .setItems(items, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                if(item == 0){
+                    CantidadJugadores = 2;
+                }else if(item == 1){
+                    CantidadJugadores = 3;
+                }else{
+                    CantidadJugadores = 4;
+                }
+            }
+        });
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+        ////////////////////////////////////////////////////////////////
 
     }
 
@@ -184,9 +213,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total2;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total2;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total2;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total2;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total2=0;
                 imagen2.setImageResource(R.drawable.pucherito20fichas);
@@ -230,9 +265,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total3;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total3;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total3;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total3;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total3=0;
                 imagen3.setImageResource(R.drawable.pucherito30fichas);
@@ -284,9 +325,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total4;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total4;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total4;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total4;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total4=0;
                 imagen4.setImageResource(R.drawable.pucherito40fichas);
@@ -346,9 +393,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total5;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total5;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total5;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total5;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total5=0;
                 imagen5.setImageResource(R.drawable.pucherito50fichas);
@@ -416,11 +469,17 @@ public class MainActivity extends ActionBarActivity {
                 hasficha6.remove(6);
                 hasficha6.put(1,1);
                 if(Turno == 1){
-                    Player1+=total6;
+                    Player1+=total9;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total6;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total6;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total6;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total6=0;
                 imagen6.setImageResource(R.drawable.pucherito60fichas);
@@ -507,9 +566,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total8;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total8;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total8;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total8;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total8=0;
                 imagen8.setImageResource(R.drawable.pucherito80fichas);
@@ -598,9 +663,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total9;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total9;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total9;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total9;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total9=0;
                 imagen9.setImageResource(R.drawable.pucherito90fichas);
@@ -695,9 +766,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total10;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total10;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total10;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total10;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total10=0;
                 imagen10.setImageResource(R.drawable.pucherito100fichas);
@@ -800,9 +877,15 @@ public class MainActivity extends ActionBarActivity {
                 if(Turno == 1){
                     Player1+=total11;
                     textJug1.setText("Jugador1:"+Player1);
-                }else{
+                }else if(Turno ==2){
                     Player2+=total11;
                     textJug2.setText("Jugador2:"+Player2);
+                }else if(Turno ==3){
+                    Player3+=total11;
+                    textJug3.setText("Jugador3:"+Player3);
+                }else{
+                    Player4+=total11;
+                    textJug4.setText("Jugador4:"+Player4);
                 }
                 total11=0;
                 imagen11.setImageResource(R.drawable.pucherito110fichas);
@@ -814,12 +897,53 @@ public class MainActivity extends ActionBarActivity {
             Contador = Contador -1;
         }
         if(A+B==12){
+            if(Turno == 1){
+                Player1+=Puchero;
+                textJug1.setText("Jugador1:"+Player1);
+            }else if(Turno ==2){
+                Player2+=total11;
+                textJug2.setText("Jugador2:"+Player2);
+            }else if(Turno ==3){
+                Player3+=total11;
+                textJug3.setText("Jugador3:"+Player3);
+            }else{
+                Player4+=total11;
+                textJug4.setText("Jugador4:"+Player4);
+            }
+            Puchero = 0;
+        }
+        if(CantidadJugadores==2){
+            Log.i("Cantidad de jugadores","2");
+            if(Turno == 1){
+                Turno = 2;
+            }else{
+                Turno = 1;
+            }
+        }
+        if(CantidadJugadores==3){
+            Log.i("Cantidad de jugadores","3");
 
+            if(Turno == 1){
+                Turno = 2;
+            }else if(Turno == 2) {
+                Turno = 3;
+            }else{
+                Turno = 1;
+            }
         }
-        if(Turno == 1){
-            Turno = 2;
-        }else{
-            Turno =1;
+        if(CantidadJugadores==4) {
+            Log.i("Cantidad de jugadores","4");
+
+            if (Turno == 1) {
+                Turno = 2;
+            } else if (Turno == 2) {
+                Turno = 3;
+            } else if (Turno == 3) {
+                Turno = 4;
+            } else {
+                Turno = 1;
+            }
         }
+
     }
 }
