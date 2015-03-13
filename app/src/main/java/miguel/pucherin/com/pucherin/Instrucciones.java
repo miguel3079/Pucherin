@@ -1,33 +1,24 @@
 package miguel.pucherin.com.pucherin;
 
-import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
 
-public class PantallaMenu extends ActionBarActivity {
+public class Instrucciones extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_menu);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Hide the action bar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-        ///
+        setContentView(R.layout.activity_instrucciones);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_pantalla_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_instrucciones, menu);
         return true;
     }
 
@@ -44,9 +35,5 @@ public class PantallaMenu extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-    public void pasarJugar(View view){
-        Intent pasarJugar = new Intent(this,SeleccionJugador.class);
-        startActivity(pasarJugar);
     }
 }

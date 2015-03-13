@@ -70,17 +70,16 @@
         android:layout_height="100dp"
         android:id="@+id/imagen10"
         android:src="@drawable/pucherito100fichas"
-        android:layout_alignTop="@+id/imagencentro"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imagen11" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imagen11"
         android:src="@drawable/pucherito110fichas"
-        android:layout_alignTop="@+id/imagen5"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
+        android:layout_alignTop="@+id/dadoB"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="100dp"
@@ -115,5 +114,41 @@
         android:src="@drawable/dado1"
         android:layout_alignTop="@+id/dadoA"
         android:layout_alignEnd="@+id/imagen9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador1: "
+        android:id="@+id/textViewJug1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador2:"
+        android:id="@+id/textViewJug2"
+        android:layout_below="@+id/textViewJug1"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador3:"
+        android:id="@+id/textViewJug3"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/imagen5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador4:"
+        android:id="@+id/textViewJug4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffffff" />
 
 </RelativeLayout>

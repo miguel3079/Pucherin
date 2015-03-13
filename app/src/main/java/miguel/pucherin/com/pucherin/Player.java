@@ -7,7 +7,6 @@ import java.io.Serializable;
  */
 public class Player implements Serializable {
 
-    private int imagen;
     private String player;
     private int points;
 
@@ -16,9 +15,6 @@ public class Player implements Serializable {
         this.points = points;
     }
 
-    public int getImagen() {
-        return imagen;
-    }
 
     public String getPlayer() {
         return player;
@@ -26,10 +22,6 @@ public class Player implements Serializable {
 
     public int getPoints() {
         return points;
-    }
-
-    public void setImagen(int imagen) {
-        this.imagen = imagen;
     }
 
     public void setPlayer(String player) {
