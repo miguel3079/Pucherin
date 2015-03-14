@@ -4,5 +4,11 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
+    <style name="Turno">
+        <item name="android:textColor">#FF19FF34</item>
+    </style>
+    <style name="TurnoNo">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
 
 </resources>

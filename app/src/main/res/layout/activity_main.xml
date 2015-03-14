@@ -70,7 +70,7 @@
         android:layout_height="100dp"
         android:id="@+id/imagen10"
         android:src="@drawable/pucherito100fichas"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/imagen5"
         android:layout_alignStart="@+id/imagen11" />
 
     <ImageView
@@ -78,7 +78,7 @@
         android:layout_height="100dp"
         android:id="@+id/imagen11"
         android:src="@drawable/pucherito110fichas"
-        android:layout_alignTop="@+id/dadoB"
+        android:layout_alignBottom="@+id/textViewJug3"
         android:layout_alignParentEnd="true" />
 
     <ImageView

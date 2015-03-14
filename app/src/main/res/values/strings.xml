@@ -7,5 +7,11 @@
     <string name="title_activity_pantalla_menu">PantallaMenu</string>
     <string name="title_activity_seleccion_jugador">SeleccionJugador</string>
     <string name="title_activity_instrucciones">Instrucciones</string>
-
+    <string name="instrucciones">Este juego pueden jugar hasta 4 personas, tiene un pucherito\n
+    y dos dados, el jugador debera pulsar en "El juego del pucherito"(centro) para lanzar\n
+    los dados. Ejemplo si el jugador saca 3(suma de los dos lados)colocara una ficha en \n
+    una de las posiciones de los espacios de la ficha 3, al completar la cantidad de huecos que tenga\n
+    el jugador que saque esa cantidad se quedara con las fichas. en el caso de sacar 7 se \n
+    se añade una ficha al puchero, si se saca 12 se recojera lo del puchero, pero si \n
+    no quedan fichas en el contador, quien saque 12 se lleba todo lo que hay en el tablero.</string>
 </resources>

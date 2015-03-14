@@ -49,4 +49,12 @@ public class PantallaMenu extends ActionBarActivity {
         Intent pasarJugar = new Intent(this,MainActivity.class);
         startActivity(pasarJugar);
     }
+    public void pasarInstru(View view){
+        Intent pasarInstru = new Intent(this,Instrucciones.class);
+        startActivity(pasarInstru);
+    }
+    public void pasarPuntu(View view){
+        Intent pasarPuntu = new Intent(this,MainActivity.class);
+        startActivity(pasarPuntu);
+    }
 }
